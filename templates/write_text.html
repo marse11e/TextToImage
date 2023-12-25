@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Текст</title>
+</head>
+<body>
+    <h1>Текст для генерации картинок</h1>
+    <form method="post" action="{% url 'write_text' %}">
+        {% csrf_token %}
+        {{ form.text }}
+    <!-- <textarea name="content" rows="4" cols="50" placeholder="Введите текст"></textarea> -->
+        <button type="submit">Сгенерировать картинку</button>
+    </form>
+</body>
+</html>
